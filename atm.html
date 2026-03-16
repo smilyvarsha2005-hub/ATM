@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mini Bank ATM</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="atm.css">
+
+</head>
+
+<body>
+
+
+
+</header>
+
+
+<h1 class="title">Mini Bank ATM</h1>
+
+<div class="container">
+
+
+<!-- ATM CARD -->
+
+<div class="card-box" onclick="flipCard()">
+
+<div class="card" id="card">
+
+<!-- FRONT -->
+
+<div class="front">
+
+<div class="chip"></div>
+
+<div class="tap">📶</div>
+
+<h3 class="bank">Mini Bank</h3>
+
+<p id="cardNumber" class="number"></p>
+
+<p class="name">CARD HOLDER</p>
+
+<p class="brand">VISA</p>
+
+</div>
+
+
+<!-- BACK -->
+
+<div class="back">
+
+<div class="strip"></div>
+
+<p class="cvv">CVV: 123</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- LOGIN SECTION -->
+
+<div class="login" id="loginBox">
+
+<h2>Enter ATM PIN</h2>
+
+<input type="password" id="pin" placeholder="Enter 4 digit PIN">
+
+<button onclick="login()">Login</button>
+
+<p id="loginMsg"></p>
+
+</div>
+
+
+
+<!-- ATM DASHBOARD -->
+
+<div id="atmBox">
+
+<h2>ATM Dashboard</h2>
+
+<p class="balance">
+Balance ₹<span id="balance">5000</span>
+</p>
+
+<input type="number" id="amount" placeholder="Enter Amount">
+
+
+<div class="btns">
+
+<button onclick="deposit()">Deposit</button>
+
+<button onclick="withdraw()">Withdraw</button>
+
+</div>
+
+
+<h3>Transactions</h3>
+
+<ul id="history"></ul>
+
+
+<button onclick="downloadReceipt()">Download Receipt</button>
+
+<button onclick="logout()" class="logout">Logout</button>
+
+</div>
+
+
+</div>
+
+
+<script src="atm.js"></script>
+
+</body>
+
+</html>
